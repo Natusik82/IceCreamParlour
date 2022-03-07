@@ -4,7 +4,7 @@
   * I used enum for declaring a **flavour** to ensure only the values declared can enter the system thus excluding any unknown flavours. Same choice for **promo** options.
   * **PromoStrategy** describes the calculation strategy. In the real world application this can be populated from the database, text files, API or any external source. 
     * **quantityQualifiedForPromo** can be any number where the total number qualifies for a promo being applied.
-    *** promoPay** can be any number between 0 and 1 where 0 means you pay nothing for one item within **quantityQualifiedForPromo**, 0.5 mean you pay half price for one item within **quantityQualifiedForPromo**
+    * **promoPay** can be any number between 0 and 1 where 0 means you pay nothing for one item within **quantityQualifiedForPromo**, 0.5 mean you pay half price for one item within **quantityQualifiedForPromo**
   * **IceCream** describes the flavour, price and whether the promo is applied for this flavour. In the real world appplication the price can come from the external source like the database or API call but for the sake of simplicity I set it directly on the data class.
   * **IceCreamOrderItem** is what enters the calculator or rather list of items if multiple flavours are in the order.
   * **IceCreamOrder** is what the calculator returns: the items with individual price and the totals.
